@@ -1,0 +1,51 @@
+fileFormatVersion: 2
+guid: 1c8f64d7a90e8ea4189a83b7be166600
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":["@assets/Experience/Scripts/PlayerStaminaManager","@assets/Experience/Scripts/AudioManager","@assets/Experience/Scripts/GameManager","@assets/Experience/Scripts/TimerManager"],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nconst AudioManager_1 = require(\"@assets/Experience/Scripts/AudioManager\");\nconst
+    Genies_Avatars_Sdk_1 = require(\"Genies.Avatars.Sdk\");\nconst GameManager_1
+    = require(\"@assets/Experience/Scripts/GameManager\");\nconst TimerManager_1
+    = require(\"@assets/Experience/Scripts/TimerManager\");\nclass PlayerDeathManager
+    extends UnityEngine_1.MonoBehaviour {\n    constructor() {\n        super(...arguments);\n       
+    this.respawnTime = 3;\n        this.isDead = false;\n    }\n    async Start()
+    {\n        this.characterController = this.GetComponent($typeof(UnityEngine_1.CharacterController));\n       
+    this.staminaManager = // @ts-ignore\n            this.GetComponent(\"@assets/Experience/Scripts/PlayerStaminaManager.PlayerStaminaManager\");\n       
+    if (this.staminaManager != null) {\n            this.staminaManager.onStaminaChange.addListener(this.checkDeath,
+    //@ts-ignore\n            this);\n        }\n        this.player = this.gameObject;\n       
+    await this.getAnimatorFromChildren();\n        GameManager_1.default.Instance.OnGameStateChange.addListener(this.CheckGameState,
+    //@ts-ignore\n        this);\n    }\n    async getAnimatorFromChildren() {\n       
+    const avatar = this.GetComponent($typeof(Genies_Avatars_Sdk_1.CreateUserAvatar));\n       
+    // Wait until `DidSpawn` is true\n        while (!avatar.DidSpawn) {\n           
+    TimerManager_1.default.Instance.stopTimer();\n            await new Promise(resolve
+    => setTimeout(resolve, 100));\n        }\n        TimerManager_1.default.Instance.startTimer();\n       
+    this.animator = this.GetComponentInChildren($typeof(UnityEngine_1.Animator));\n   
+    }\n    checkDeath(stamina) {\n        if (stamina <= 0 && !this.isDead) {\n           
+    TimerManager_1.default.Instance.stopTimer();\n            this.die(this.staminaManager.isInDeathArea);\n       
+    }\n    }\n    die(isInDeathArea) {\n        this.isDead = true;\n        if (isInDeathArea)
+    {\n            this.animator.SetBool(\"IsDeadFalling\", true);\n        }\n       
+    else {\n            this.animator.SetBool(\"IsDead\", true);\n        }\n       
+    AudioManager_1.default.Instance.playSFX(this.deathSound);\n        setTimeout(()
+    => {\n            this.respawn();\n            GameManager_1.default.Instance.ChangeGameState(GameManager_1.GameState.GAME_OVER);\n       
+    }, 3000);\n    }\n    OnWin() {\n        this.respawn();\n    }\n    respawn()
+    {\n        this.characterController.enabled = false;\n        // Instantly move
+    the player to the respawn point\n        this.transform.position = this.respawnPoint.position;\n       
+    this.transform.rotation = UnityEngine_1.Quaternion.identity;\n        // Re-enable
+    CharacterController after a short delay\n        setTimeout(() => {\n           
+    this.characterController.enabled = true;\n        }, 100);\n        // Reset
+    stamina\n        if (this.staminaManager) {\n            this.staminaManager.resetStamina();\n       
+    }\n        this.animator.SetBool(\"IsDead\", false);\n        this.animator.SetBool(\"IsDeadFalling\",
+    false);\n        this.isDead = false;\n        TimerManager_1.default.Instance.resetTimer();\n   
+    }\n    CheckGameState(newState) {\n        switch (newState) {\n            case
+    GameManager_1.GameState.WIN_GAME:\n                this.OnWin();\n               
+    break;\n        }\n    }\n}\nexports.default = PlayerDeathManager;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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Q1osSUFBSSxDQUFDLG1CQUFtQixDQUFDLE9BQU8sR0FBRyxJQUFJO1FBQzNDLENBQUMsRUFBRSxHQUFHLENBQUM7UUFFUCxnQkFBZTtRQUNmLElBQUksSUFBSSxDQUFDLGNBQWMsRUFBRTtZQUNyQixJQUFJLENBQUMsY0FBYyxDQUFDLFlBQVksRUFBRTtRQUN0QztRQUNBLElBQUksQ0FBQyxRQUFRLENBQUMsT0FBTyxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUM7UUFDdEMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsZUFBZSxFQUFFLEtBQUssQ0FBQztRQUc3QyxJQUFJLENBQUMsTUFBTSxHQUFHLEtBQUs7UUFDbkIsc0JBQVksQ0FBQyxRQUFRLENBQUMsVUFBVSxFQUFFO0lBQ3RDO0lBRVEsY0FBYyxDQUFDLFFBQW1CO1FBQ3RDLFFBQVEsUUFBUSxFQUFFO1lBRWQsS0FBSyx1QkFBUyxDQUFDLFFBQVE7Z0JBQ25CLElBQUksQ0FBQyxLQUFLLEVBQUU7Z0JBQ1osTUFBSztRQUNiO0lBQ0o7Q0FFSjtBQXJHQSxxQ0FxR0EiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlBsYXllckRlYXRoTWFuYWdlci50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdfQ==","ScriptHash":"c2992a6fb1cec6ef169bf7358a313074","Specifier":"@assets/Experience/Scripts/PlayerDeathManager","DefaultTypeName":"@assets/Experience/Scripts/PlayerDeathManager.PlayerDeathManager","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/PlayerDeathManager.PlayerDeathManager","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[{"Path":"respawnPoint","Name":"respawnPoint","TypeName":"UnityEngine.Transform","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Respawn
+    Point","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"player","Name":"player","TypeName":"UnityEngine.GameObject","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Player","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"deathSound","Name":"deathSound","TypeName":"System.String","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Death
+    Sound","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"respawnTime","Name":"respawnTime","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["3"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Respawn
+    Time","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"animator","Name":"animator","TypeName":"UnityEngine.Animator","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Animator","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null}],"SupportedUiEvents":"None","DisplayName":"PlayerDeathManager","name":"PlayerDeathManager","hideFlags":"NotEditable"}'

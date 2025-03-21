@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 40d7cb7bd7bd1484f9445286771043d4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":[],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nconst TMPro_1 = require(\"TMPro\");\nclass
+    UniqueRandomTime extends UnityEngine_1.MonoBehaviour {\n    constructor() {\n       
+    super(...arguments);\n        this.textComponent = null;\n    }\n    Start()
+    {\n        this.textComponent = this.GetComponent($typeof(TMPro_1.TMP_Text));\n       
+    if (this.textComponent) {\n            let uniqueTime = this.generateUniqueTime();\n           
+    this.textComponent.text = uniqueTime;\n        }\n    }\n    generateUniqueTime()
+    {\n        let time;\n        do {\n            let hours = // @ts-ignore\n            
+    UnityEngine_1.Random.Range_EBB7509C_H2CFB2EE5(0, 24);\n            let minutes
+    = // @ts-ignore\n             UnityEngine_1.Random.Range_EBB7509C_H2CFB2EE5(0,
+    60);\n            let seconds = // @ts-ignore\n             UnityEngine_1.Random.Range_EBB7509C_H2CFB2EE5(0,
+    60);\n            time = this.formatTime(hours, minutes, seconds);\n        }
+    while (UniqueRandomTime.assignedTimes.has(time)); // Ensure uniqueness\n       
+    UniqueRandomTime.assignedTimes.add(time);\n        return time;\n    }\n    formatTime(hours,
+    minutes, seconds) {\n        let h = hours.toString().padStart(2, \"0\");\n       
+    let m = minutes.toString().padStart(2, \"0\");\n        let s = seconds.toString().padStart(2,
+    \"0\");\n        return `${h}:${m}:${s}`;\n    }\n    Update() { }\n}\nUniqueRandomTime.assignedTimes
+    = new Set(); // Stores used times\nexports.default = UniqueRandomTime;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVW5pcXVlUmFuZG9tVGltZS5qcyIsIm1hcHBpbmdzIjoiOztBQUNBLDZDQUFtRDtBQUNuRCxpQ0FBZ0M7QUFDaEMsTUFBcUIsZ0JBQWlCLFNBQVEsMkJBQWE7SUFBM0Q7O1FBR1ksa0JBQWEsR0FBb0IsSUFBSTtJQStCakQ7SUE3QlksS0FBSztRQUNULElBQUksQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDLFlBQVcsU0FBRSxnQkFBTyxFQUFJO1FBRWxELElBQUksSUFBSSxDQUFDLGFBQWEsRUFBRTtZQUNwQixJQUFJLFVBQVUsR0FBRyxJQUFJLENBQUMsa0JBQWtCLEVBQUU7WUFDMUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLEdBQUcsVUFBVTtRQUN4QztJQUNKO0lBRVEsa0JBQWtCO1FBQ3RCLElBQUksSUFBWTtRQUNoQixHQUFHO1lBQ0MsSUFBSSxLQUFLLEdBQUU7YUFBQyxvQkFBTSxDQUFDLHdCQUFLLENBQUMsQ0FBQyxFQUFFLEVBQUUsQ0FBQztZQUMvQixJQUFJLE9BQU8sR0FBRTthQUFDLG9CQUFNLENBQUMsd0JBQUssQ0FBQyxDQUFDLEVBQUUsRUFBRSxDQUFDO1lBQ2pDLElBQUksT0FBTyxHQUFFO2FBQUMsb0JBQU0sQ0FBQyx3QkFBSyxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUM7WUFFakMsSUFBSSxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsS0FBSyxFQUFFLE9BQU8sRUFBRSxPQUFPLENBQUM7UUFDbkQsQ0FBQyxRQUFRLGdCQUFnQixDQUFDLGFBQWEsQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxvQkFBbUI7UUFFdkUsZ0JBQWdCLENBQUMsYUFBYSxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUM7UUFDeEMsT0FBTyxJQUFJO0lBQ2Y7SUFFUSxVQUFVLENBQUMsS0FBYSxFQUFFLE9BQWUsRUFBRSxPQUFlO1FBQzlELElBQUksQ0FBQyxHQUFHLEtBQUssQ0FBQyxRQUFRLEVBQUUsQ0FBQyxRQUFRLENBQUMsQ0FBQyxFQUFFLEdBQUcsQ0FBQztRQUN6QyxJQUFJLENBQUMsR0FBRyxPQUFPLENBQUMsUUFBUSxFQUFFLENBQUMsUUFBUSxDQUFDLENBQUMsRUFBRSxHQUFHLENBQUM7UUFDM0MsSUFBSSxDQUFDLEdBQUcsT0FBTyxDQUFDLFFBQVEsRUFBRSxDQUFDLFFBQVEsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDO1FBQzNDLE9BQU8sR0FBRyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsRUFBRTtJQUMzQixDQUFDO0lBQVMsTUFBTSxLQUFXOztBQS9CWiw4QkFBYSxHQUFnQixJQUFJLEdBQUcsRUFBRSxBQUF6QixDQUEwQixDQUFDLG9CQUFtQjtrQkFGekQsZ0JBQWdCIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJVbmlxdWVSYW5kb21UaW1lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbF19","ScriptHash":"afb28e8b307fc56f14960746e58bfc6d","Specifier":"@assets/Experience/Scripts/UniqueRandomTime","DefaultTypeName":"@assets/Experience/Scripts/UniqueRandomTime.UniqueRandomTime","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/UniqueRandomTime.UniqueRandomTime","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[],"SupportedUiEvents":"None","DisplayName":"UniqueRandomTime","name":"UniqueRandomTime","hideFlags":"NotEditable"}'

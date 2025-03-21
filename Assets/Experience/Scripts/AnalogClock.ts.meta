@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: b1e652329c20f58479f1d58bc34d4786
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: "{\"IsCompiled\":true,\"CompilerVersion\":\"2.0.63\",\"ReferencedSpecifiers\":[],\"Source\":\"\\\"use
+    strict\\\";\\nObject.defineProperty(exports, \\\"__esModule\\\", { value: true
+    });\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\nclass AnalogClock
+    extends UnityEngine_1.MonoBehaviour {\\n    Update() {\\n        if (!this.timeText)\\n           
+    return;\\n        // Try to parse the time from the UI text\\n        const parsedTime
+    = this.parseTime(this.timeText.text);\\n        if (!parsedTime) {\\n           
+    return;\\n        }\\n        if (!parsedTime)\\n            return;\\n       
+    const hours = parsedTime.getHours() % 12;\\n        const minutes = parsedTime.getMinutes();\\n       
+    const seconds = parsedTime.getSeconds();\\n        // Convert time to rotation\\n       
+    const hourAngle = (hours + minutes / 60) * 30; // 30\xB0 per hour\\n        const
+    minuteAngle = (minutes + seconds / 60) * 6; // 6\xB0 per minute\\n        const
+    secondAngle = seconds * 6; // 6\xB0 per second\\n        // Apply rotation\\n       
+    this.hourHand.localRotation = // @ts-ignore\\n            UnityEngine_1.Quaternion.Euler_EBB7509C_E4172388((0),
+    (0), -hourAngle);\\n        this.minuteHand.localRotation = // @ts-ignore\\n           
+    UnityEngine_1.Quaternion.Euler_EBB7509C_E4172388((0), (0), -minuteAngle);\\n       
+    this.secondHand.localRotation = // @ts-ignore\\n            UnityEngine_1.Quaternion.Euler_EBB7509C_E4172388((0),
+    (0), -secondAngle);\\n    }\\n    // Function to parse time string (handles various
+    formats)\\n    parseTime(timeString) {\\n        const date = new Date();\\n       
+    const timeParts = timeString.split(':');\\n        if (timeParts.length < 2)\\n           
+    return null;\\n        const hours = parseInt(timeParts[0]);\\n        const
+    minutes = parseInt(timeParts[1]);\\n        const seconds = timeParts.length
+    > 2 ? parseInt(timeParts[2]) : 0;\\n        if (isNaN(hours) || isNaN(minutes)
+    || isNaN(seconds))\\n            return null;\\n        date.setHours(hours,
+    minutes, seconds);\\n        return date;\\n    }\\n}\\nexports.default = AnalogClock;\\n//#
+    sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQW5hbG9nQ2xvY2suanMiLCJtYXBwaW5ncyI6Ijs7QUFDQSw2Q0FBa0U7QUFFbEUsTUFBcUIsV0FBWSxTQUFRLDJCQUFhO0lBT2xELE1BQU07UUFDRixJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVE7WUFBRSxPQUFNO1FBRTFCLHlDQUF3QztRQUN4QyxNQUFNLFVBQVUsR0FBUyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDO1FBQzNELElBQUksQ0FBQyxVQUFVLEVBQUU7WUFDYixPQUFNO1FBQ1Y7UUFDQSxJQUFJLENBQUMsVUFBVTtZQUFFLE9BQU07UUFFdkIsTUFBTSxLQUFLLEdBQVcsVUFBVSxDQUFDLFFBQVEsRUFBRSxHQUFHLEVBQUU7UUFDaEQsTUFBTSxPQUFPLEdBQVcsVUFBVSxDQUFDLFVBQVUsRUFBRTtRQUMvQyxNQUFNLE9BQU8sR0FBVyxVQUFVLENBQUMsVUFBVSxFQUFFO1FBRS9DLDJCQUEwQjtRQUMxQixNQUFNLFNBQVMsR0FBVyxDQUFDLEtBQUssR0FBRyxPQUFPLEdBQUcsRUFBRSxDQUFDLEdBQUcsRUFBRSxDQUFDLENBQUMsZUFBYztRQUNyRSxNQUFNLFdBQVcsR0FBVyxDQUFDLE9BQU8sR0FBRyxPQUFPLEdBQUcsRUFBRSxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsZ0JBQWU7UUFDekUsTUFBTSxXQUFXLEdBQVcsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDLGdCQUFlO1FBRXhELGlCQUFnQjtRQUNoQixJQUFJLENBQUMsUUFBUSxDQUFDLGFBQWEsR0FBRTtZQUFDLHdCQUFVLENBQUMsdUJBQUksQ0FBQyxDQUFDLEVBQUMsRUFBQyxDQUFDLEVBQUMsRUFBRSxDQUFDLFNBQVMsQ0FBQztRQUNoRSxJQUFJLENBQUMsVUFBVSxDQUFDLGFBQWEsR0FBRTtZQUFDLHdCQUFVLENBQUMsdUJBQUksQ0FBQyxDQUFDLEVBQUMsRUFBQyxDQUFDLEVBQUMsRUFBRSxDQUFDLFdBQVcsQ0FBQztRQUNwRSxJQUFJLENBQUMsVUFBVSxDQUFDLGFBQWEsR0FBRTtZQUFDLHdCQUFVLENBQUMsdUJBQUksQ0FBQyxDQUFDLEVBQUMsRUFBQyxDQUFDLEVBQUMsRUFBRSxDQUFDLFdBQVcsQ0FBQztJQUN4RTtJQUVBLDBEQUF5RDtJQUNqRCxTQUFTLENBQUMsVUFBa0I7UUFDaEMsTUFBTSxJQUFJLEdBQUcsSUFBSSxJQUFJLEVBQUU7UUFDdkIsTUFBTSxTQUFTLEdBQUcsVUFBVSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUM7UUFDdkMsSUFBSSxTQUFTLENBQUMsTUFBTSxHQUFHLENBQUM7WUFBRSxPQUFPLElBQUk7UUFFckMsTUFBTSxLQUFLLEdBQUcsUUFBUSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUNwQyxNQUFNLE9BQU8sR0FBRyxRQUFRLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ3RDLE1BQU0sT0FBTyxHQUFHLFNBQVMsQ0FBQyxNQUFNLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFFakUsSUFBSSxLQUFLLENBQUMsS0FBSyxDQUFDLElBQUksS0FBSyxDQUFDLE9BQU8sQ0FBQyxJQUFJLEtBQUssQ0FBQyxPQUFPLENBQUM7WUFBRSxPQUFPLElBQUk7UUFFakUsSUFBSSxDQUFDLFFBQVEsQ0FBQyxLQUFLLEVBQUUsT0FBTyxFQUFFLE9BQU8sQ0FBQztRQUN0QyxPQUFPLElBQUk7SUFDZjtDQUNKO0FBL0NBLDhCQStDQSIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQW5hbG9nQ2xvY2sudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=\",\"ScriptHash\":\"93a2cd921ae96fbc4ba2ad16bdeb2af1\",\"Specifier\":\"@assets/Experience/Scripts/AnalogClock\",\"DefaultTypeName\":\"@assets/Experience/Scripts/AnalogClock.AnalogClock\",\"IsMonobehaviour\":true,\"IsScriptableObj\":false,\"InheritanceChain\":[\"@assets/Experience/Scripts/AnalogClock.AnalogClock\",\"UnityEngine.MonoBehaviour\",\"UnityEngine.Behaviour\",\"UnityEngine.Component\",\"UnityEngine.Object\",\"@com.genies.scripting@1.11.0\\\\Runtime\\\\Typing\\\\index.d.System.Object\"],\"Properties\":[{\"Path\":\"timeText\",\"Name\":\"timeText\",\"TypeName\":\"TMPro.TMP_Text\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Time
+    Text\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null},{\"Path\":\"hourHand\",\"Name\":\"hourHand\",\"TypeName\":\"UnityEngine.Transform\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Hour
+    Hand\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null},{\"Path\":\"minuteHand\",\"Name\":\"minuteHand\",\"TypeName\":\"UnityEngine.Transform\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Minute
+    Hand\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null},{\"Path\":\"secondHand\",\"Name\":\"secondHand\",\"TypeName\":\"UnityEngine.Transform\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Second
+    Hand\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null}],\"SupportedUiEvents\":\"None\",\"DisplayName\":\"AnalogClock\",\"name\":\"AnalogClock\",\"hideFlags\":\"NotEditable\"}"

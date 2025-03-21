@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Experience/Scenes/Clocks.unity
+    guid: 19cf4c26ae4b9e24782dce1178b7515a
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 18854372f0699ca4fbca8b03bc16b7d8,
+      type: 2}

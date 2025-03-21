@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4b4c79497dc91374380246692cc0eab7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":["@assets/Experience/Scripts/TimerManager"],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nconst TimerManager_1 = require(\"@assets/Experience/Scripts/TimerManager\");\nclass
+    ScoreManager extends UnityEngine_1.MonoBehaviour {\n    constructor() {\n       
+    super(...arguments);\n        this.score = 0;\n    }\n    Awake() {\n       
+    //Establishes the GameManager singleton instance\n        if (ScoreManager.Instance
+    == null) {\n            ScoreManager.Instance = this;\n        }\n        else
+    {\n            ScoreManager.Destroy(this.gameObject);\n        }\n    }\n   
+    setScore() {\n        this.score = TimerManager_1.default.Instance.getElapsedTime();\n   
+    }\n    getScore() {\n        return this.score;\n    }\n}\nexports.default =
+    ScoreManager;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NvcmVNYW5hZ2VyLmpzIiwibWFwcGluZ3MiOiI7O0FBQ0EsNkNBQTJDO0FBQzNDLDBFQUF5QztBQUN6QyxNQUFxQixZQUFhLFNBQVEsMkJBQWE7SUFBdkQ7O1FBQ0ksVUFBSyxHQUFXLENBQUMsQ0FFSDtJQW1CbEI7SUFqQkksS0FBSztRQUNELGdEQUErQztRQUMvQyxJQUFJLFlBQVksQ0FBQyxRQUFRLElBQUksSUFBSSxFQUFFO1lBQy9CLFlBQVksQ0FBQyxRQUFRLEdBQUcsSUFBSTtRQUNoQyxDQUFDO2FBQU07WUFDSCxZQUFZLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUM7UUFDekM7SUFDSjtJQUVBLFFBQVE7UUFDSixJQUFJLENBQUMsS0FBSyxHQUFHLHNCQUFZLENBQUMsUUFBUSxDQUFDLGNBQWMsRUFBRTtJQUN2RDtJQUVBLFFBQVE7UUFDSixPQUFPLElBQUksQ0FBQyxLQUFLO0lBQ3JCO0NBRUo7QUF0QkEsK0JBc0JBIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJTY29yZU1hbmFnZXIudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=","ScriptHash":"5faecc6202d5e7dbef744b6f45d28ef6","Specifier":"@assets/Experience/Scripts/ScoreManager","DefaultTypeName":"@assets/Experience/Scripts/ScoreManager.ScoreManager","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/ScoreManager.ScoreManager","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[{"Path":"score","Name":"score","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["0"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Score","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null}],"SupportedUiEvents":"None","DisplayName":"ScoreManager","name":"ScoreManager","hideFlags":"NotEditable"}'

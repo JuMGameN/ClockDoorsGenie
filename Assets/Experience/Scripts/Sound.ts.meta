@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58fb8a66a4bd9a144b29bc91340a9015
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":[],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nclass
+    Sound {\n    constructor(nameSound, clipSound) {\n        this.nameSound = nameSound;\n       
+    this.clipSound = clipSound;\n    }\n}\nexports.default = Sound;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU291bmQuanMiLCJtYXBwaW5ncyI6Ijs7QUFFQSxNQUFxQixLQUFLO0lBS3RCLFlBQVksU0FBaUIsRUFBRSxTQUFvQjtRQUMvQyxJQUFJLENBQUMsU0FBUyxHQUFHLFNBQVM7UUFDMUIsSUFBSSxDQUFDLFNBQVMsR0FBRyxTQUFTO0lBQzlCO0NBRUo7QUFWQSx3QkFVQSIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU291bmQudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=","ScriptHash":"b29a40867a76f67bbcfe43a747e535ac","Specifier":"@assets/Experience/Scripts/Sound","DefaultTypeName":"@assets/Experience/Scripts/Sound.Sound","IsMonobehaviour":false,"IsScriptableObj":false,"InheritanceChain":[],"Properties":[],"SupportedUiEvents":"None","DisplayName":"Sound","name":"Sound","hideFlags":"NotEditable"}'

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 772546e792522aa47ac7eba052e9b113
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":[],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nclass ToggleVisibilityOnTrigger extends
+    UnityEngine_1.MonoBehaviour {\n    Start() {\n        this.setChildrenActive(false);\n   
+    }\n    OnTriggerEnter(other) {\n        if (other.gameObject.tag === \"Player\")
+    {\n            this.setChildrenActive(true);\n        }\n    }\n    OnTriggerExit(other)
+    {\n        if (other.gameObject.tag === \"Player\") {\n            this.setChildrenActive(false);\n       
+    }\n    }\n    setChildrenActive(active) {\n        let parentTransform = this.gameObject.transform;\n       
+    let childCount = parentTransform.childCount;\n        for (let i = 0; i < childCount;
+    i++) {\n            let child = parentTransform.GetChild(i).gameObject;\n           
+    child.SetActive(active);\n        }\n    }\n}\nexports.default = ToggleVisibilityOnTrigger;\n//#
+    sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9nZ2xlVmlzaWJpbGl0eU9uVHJpZ2dlci5qcyIsIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE0RTtBQUU1RSxNQUFhLHlCQUEwQixTQUFRLDJCQUFhO0lBRWhELEtBQUs7UUFDVCxJQUFJLENBQUMsaUJBQWlCLENBQUMsS0FBSyxDQUFDO0lBQ2pDO0lBQ0EsY0FBYyxDQUFDLEtBQWU7UUFDMUIsSUFBSSxLQUFLLENBQUMsVUFBVSxDQUFDLEdBQUcsS0FBSyxRQUFRLEVBQUU7WUFDbkMsSUFBSSxDQUFDLGlCQUFpQixDQUFDLElBQUksQ0FBQztRQUNoQztJQUNKO0lBRUEsYUFBYSxDQUFDLEtBQWU7UUFDekIsSUFBSSxLQUFLLENBQUMsVUFBVSxDQUFDLEdBQUcsS0FBSyxRQUFRLEVBQUU7WUFDbkMsSUFBSSxDQUFDLGlCQUFpQixDQUFDLEtBQUssQ0FBQztRQUNqQztJQUNKO0lBRVEsaUJBQWlCLENBQUMsTUFBZTtRQUNyQyxJQUFJLGVBQWUsR0FBYyxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVM7UUFDMUQsSUFBSSxVQUFVLEdBQVcsZUFBZSxDQUFDLFVBQVU7UUFFbkQsS0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFHLFVBQVUsRUFBRSxDQUFDLEVBQUUsRUFBRTtZQUNqQyxJQUFJLEtBQUssR0FBZSxlQUFlLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVU7WUFDOUQsS0FBSyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUM7UUFDM0I7SUFDSjtDQUNKO0FBMUJBLDRDQTBCQSIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiVG9nZ2xlVmlzaWJpbGl0eU9uVHJpZ2dlci50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdfQ==","ScriptHash":"7a172dd856ff40faab5138d1eaade740","Specifier":"@assets/Experience/Scripts/ToggleVisibilityOnTrigger","DefaultTypeName":"@assets/Experience/Scripts/ToggleVisibilityOnTrigger.ToggleVisibilityOnTrigger","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/ToggleVisibilityOnTrigger.ToggleVisibilityOnTrigger","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[],"SupportedUiEvents":"None","DisplayName":"ToggleVisibilityOnTrigger","name":"ToggleVisibilityOnTrigger","hideFlags":"NotEditable"}'

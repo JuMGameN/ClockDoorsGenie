@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e598a87c3578d4756922b5824a9f6228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SerializedEnv: 1
+  ProdBuildProfiles:
+    Profiles:
+    - ProfileID: f3c24c5b-974a-4134-a8d3-d1a88ce400a4
+      ProfileName: New Profile
+      BuildSettings:
+        experienceSku: eyJleHBlcmllbmNlSUQiOiJiNjUwYWE2Ni0wNGYzLTRlNGEtYmI4My0zYTQzZDc5ZjljNmEiLCJDbGllbnRJZCI6IjNjdmpUUFJPWllUWS9wMkd1cm8vZFE9PSIsIkNsaWVudFNlY3JldCI6IjJQcmhZU2xlMk1SRVBIRUpPYlNzeUlFUEY0M1E4OSs3bjFJZlZiQWZlZTA9In0=
+        experienceManifestInfo:
+          experienceID: b650aa66-04f3-4e4a-bb83-3a43d79f9c6a
+          ClientId: 3cvjTPROZYTY/p2Guro/dQ==
+          ClientSecret: 2PrhYSle2MREPHEJObSsyIEPF43Q89+7n1IfVbAfee0=
+        mainScene:
+          sceneReference: {fileID: 102900000, guid: 19cf4c26ae4b9e24782dce1178b7515a,
+            type: 3}
+          sceneName: Clocks
+          scenePath: Assets/Experience/Scenes/Clocks.unity
+          buildIndex: -1
+        ExperienceImages:
+          Thumbnail: {fileID: 2800000, guid: 0d7f06e2d55a2494da1bd6a4ace002c8, type: 3}
+          GameIcon: {fileID: 2800000, guid: 5bd64002b24f4764da14658a6d9d5ef8, type: 3}
+          GameBackground: {fileID: 0}
+        experienceQualityLevel: 0
+        platformToggleConfig:
+          iOS: 1
+          Android: 1
+          StandaloneOSX: 1
+          StandaloneWindows64: 1
+        _traitsListString: '[]'
+        Archetypes: []
+        GradientColorStart: {r: 0, g: 0, b: 0, a: 0}
+        GradientColorEnd: {r: 0, g: 0, b: 0, a: 0}
+      ManualSkuOverride: 0
+      Sku: 
+    ActiveProfileID: f3c24c5b-974a-4134-a8d3-d1a88ce400a4
+  DevBuildProfiles:
+    Profiles:
+    - ProfileID: 17e5caa6-729e-4009-b446-e4f5f505ef15
+      ProfileName: New Profile
+      BuildSettings:
+        experienceSku: 
+        experienceManifestInfo:
+          experienceID: 
+          ClientId: 
+          ClientSecret: 
+        mainScene:
+          sceneReference: {fileID: 0}
+          sceneName: 
+          scenePath: 
+          buildIndex: -1
+        ExperienceImages:
+          Thumbnail: {fileID: 0}
+          GameIcon: {fileID: 0}
+          GameBackground: {fileID: 0}
+        experienceQualityLevel: 0
+        platformToggleConfig:
+          iOS: 1
+          Android: 1
+          StandaloneOSX: 1
+          StandaloneWindows64: 1
+        _traitsListString: '[]'
+        Archetypes: []
+        GradientColorStart: {r: 0, g: 0, b: 0, a: 0}
+        GradientColorEnd: {r: 0, g: 0, b: 0, a: 0}
+      ManualSkuOverride: 0
+      Sku: 
+    ActiveProfileID: 17e5caa6-729e-4009-b446-e4f5f505ef15

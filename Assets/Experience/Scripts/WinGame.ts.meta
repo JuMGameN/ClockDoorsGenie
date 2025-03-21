@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: aaa9ff3b512c5024fa67208e7c1c694e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":["@assets/Experience/Scripts/GameManager","@assets/Experience/Scripts/TimerManager","@assets/Experience/Scripts/ScoreManager"],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nconst GameManager_1 = require(\"@assets/Experience/Scripts/GameManager\");\nconst
+    TimerManager_1 = require(\"@assets/Experience/Scripts/TimerManager\");\nconst
+    ScoreManager_1 = require(\"@assets/Experience/Scripts/ScoreManager\");\nclass
+    WinGame extends UnityEngine_1.MonoBehaviour {\n    OnTriggerEnter(other) {\n       
+    if (other.gameObject.tag === \"Player\") {\n            TimerManager_1.default.Instance.stopTimer();\n           
+    ScoreManager_1.default.Instance.setScore();\n            setTimeout(() => {\n               
+    GameManager_1.default.Instance.ChangeGameState(GameManager_1.GameState.WIN_GAME);\n           
+    }, 3000);\n        }\n    }\n}\nexports.default = WinGame;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV2luR2FtZS5qcyIsIm1hcHBpbmdzIjoiOztBQUNBLDZDQUFxRDtBQUNyRCx3RUFBc0Q7QUFDdEQsMEVBQXlDO0FBQ3pDLDBFQUF5QztBQUN6QyxNQUFxQixPQUFRLFNBQVEsMkJBQWE7SUFFdEMsY0FBYyxDQUFDLEtBQWU7UUFDbEMsSUFBSSxLQUFLLENBQUMsVUFBVSxDQUFDLEdBQUcsS0FBSyxRQUFRLEVBQUU7WUFDbkMsc0JBQVksQ0FBQyxRQUFRLENBQUMsU0FBUyxFQUFFO1lBQ2pDLHNCQUFZLENBQUMsUUFBUSxDQUFDLFFBQVEsRUFBRTtZQUVoQyxVQUFVLENBQUMsR0FBRyxFQUFFO2dCQUNaLHFCQUFXLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyx1QkFBUyxDQUFDLFFBQVEsQ0FBQztZQUM1RCxDQUFDLEVBQUUsSUFBSSxDQUFDO1FBRVo7SUFDSjtDQUNKO0FBYkEsMEJBYUEiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIldpbkdhbWUudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=","ScriptHash":"c1b82f44f38544936590f4e0ead0800e","Specifier":"@assets/Experience/Scripts/WinGame","DefaultTypeName":"@assets/Experience/Scripts/WinGame.WinGame","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/WinGame.WinGame","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[],"SupportedUiEvents":"None","DisplayName":"WinGame","name":"WinGame","hideFlags":"NotEditable"}'

@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 763c7e7ce3c4ad4478127f7c5ba1cff3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":["@assets/Experience/Scripts/AudioManager"],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nconst AudioManager_1 = require(\"@assets/Experience/Scripts/AudioManager\");\nclass
+    DoorTrigger extends UnityEngine_1.MonoBehaviour {\n    constructor() {\n       
+    super(...arguments);\n        this.openAngle = 90; // Angle when door is open\n       
+    this.closedAngle = 0; // Angle when door is closed\n        this.isOpen = false;
+    // Track door state\n        this.rotationSpeed = 2; // Speed of opening/closing\n       
+    this.currentAngle = 0; // Track current angle\n        this.closeCoroutine =
+    null;\n        this.closeDelay = 3;\n    }\n    OnTriggerEnter(other) {\n       
+    if (other.tag === \"Player\") { // Ensure only the player can trigger it\n           
+    this.isOpen = true; // Toggle state\n            AudioManager_1.default.Instance.playSFX(\"DoorOpen\");\n       
+    }\n    }\n    OnTriggerExit(other) {\n        if (other.tag === \"Player\") {
+    // Ensure only the player can trigger it\n            // Start the coroutine
+    to close the door after a delay\n            this.closeCoroutine = this.StartCoroutine(this.closeDoorAfterDelay());\n       
+    }\n    }\n    *closeDoorAfterDelay() {\n        yield new UnityEngine_1.WaitForSeconds(this.closeDelay);
+    // Wait for 5 seconds\n        this.isOpen = false; // Close the door\n       
+    AudioManager_1.default.Instance.playSFX(\"DoorClose\");\n    }\n    Update()
+    {\n        if (!this.door)\n            return;\n        // Determine target
+    angle\n        const targetAngle = this.isOpen ? this.openAngle : this.closedAngle;\n       
+    // Smooth rotation\n        this.currentAngle = UnityEngine_1.Mathf.Lerp(this.currentAngle,
+    targetAngle, this.rotationSpeed * UnityEngine_1.Time.deltaTime);\n        this.door.localRotation
+    = // @ts-ignore\n            UnityEngine_1.Quaternion.Euler_EBB7509C_E4172388((0),
+    this.currentAngle, (0));\n    }\n}\nexports.default = DoorTrigger;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRG9vclRyaWdnZXIuanMiLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUc7QUFDekcsMEVBQXlDO0FBR3pDLE1BQXFCLFdBQVksU0FBUSwyQkFBYTtJQUF0RDs7UUFHVyxjQUFTLEdBQVcsRUFBRSxDQUFDLENBQUMsMEJBQXlCO1FBQ2pELGdCQUFXLEdBQVcsQ0FBQyxDQUFDLENBQUMsNEJBQTJCO1FBQ3BELFdBQU0sR0FBWSxLQUFLLENBQUMsQ0FBQyxtQkFBa0I7UUFDM0Msa0JBQWEsR0FBVyxDQUFDLENBQUMsQ0FBQywyQkFBMEI7UUFFcEQsaUJBQVksR0FBVyxDQUFDLENBQUMsQ0FBQyxzQkFBcUI7UUFDL0MsbUJBQWMsR0FBUSxJQUFJO1FBQzFCLGVBQVUsR0FBVyxDQUFDO0lBa0NsQztJQWhDSSxjQUFjLENBQUMsS0FBZTtRQUMxQixJQUFJLEtBQUssQ0FBQyxHQUFHLEtBQUssUUFBUSxFQUFFLENBQUMsQ0FBQyx3Q0FBdUM7WUFDakUsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUMsQ0FBQyxlQUFjO1lBRWxDLHNCQUFZLENBQUMsUUFBUSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUM7UUFDN0M7SUFDSjtJQUVBLGFBQWEsQ0FBQyxLQUFlO1FBQ3pCLElBQUksS0FBSyxDQUFDLEdBQUcsS0FBSyxRQUFRLEVBQUUsQ0FBQyxDQUFDLHdDQUF1QztZQUNqRSxzREFBcUQ7WUFDckQsSUFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxtQkFBbUIsRUFBRSxDQUFDO1FBQ3pFO0lBQ0o7SUFFUSxDQUFDLG1CQUFtQjtRQUN4QixNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUMsQ0FBQyxxQkFBb0I7UUFDL0QsSUFBSSxDQUFDLE1BQU0sR0FBRyxLQUFLLENBQUMsQ0FBQyxpQkFBZ0I7UUFDckMsc0JBQVksQ0FBQyxRQUFRLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQztJQUM5QztJQUVBLE1BQU07UUFDRixJQUFJLENBQUMsSUFBSSxDQUFDLElBQUk7WUFBRSxPQUFNO1FBRXRCLHlCQUF3QjtRQUN4QixNQUFNLFdBQVcsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsV0FBVztRQUVuRSxrQkFBaUI7UUFDakIsSUFBSSxDQUFDLFlBQVksR0FBRyxtQkFBSyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxFQUFFLFdBQVcsRUFBRSxJQUFJLENBQUMsYUFBYSxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDO1FBQ25HLElBQUksQ0FBQyxJQUFJLENBQUMsYUFBYSxHQUFFO1lBQUMsd0JBQVUsQ0FBQyx1QkFBSSxDQUFDLENBQUMsRUFBQyxFQUFFLElBQUksQ0FBQyxZQUFZLEVBQUMsQ0FBQyxDQUFDLEVBQUM7SUFFdkU7Q0FDSjtBQTVDQSw4QkE0Q0EiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkRvb3JUcmlnZ2VyLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbF19","ScriptHash":"1395b166bb4b37a278cba3fb289c36f1","Specifier":"@assets/Experience/Scripts/DoorTrigger","DefaultTypeName":"@assets/Experience/Scripts/DoorTrigger.DoorTrigger","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/DoorTrigger.DoorTrigger","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[{"Path":"door","Name":"door","TypeName":"UnityEngine.Transform","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Door","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"openAngle","Name":"openAngle","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["90"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Open
+    Angle","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"closedAngle","Name":"closedAngle","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["0"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Closed
+    Angle","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"isOpen","Name":"isOpen","TypeName":"boolean","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["false"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Is
+    Open","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"rotationSpeed","Name":"rotationSpeed","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["2"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Rotation
+    Speed","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null}],"SupportedUiEvents":"None","DisplayName":"DoorTrigger","name":"DoorTrigger","hideFlags":"NotEditable"}'
