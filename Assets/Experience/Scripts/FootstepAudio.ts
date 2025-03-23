@@ -18,6 +18,7 @@ export default class FootstepAudio extends MonoBehaviour {
     private Update(): void {
         const velocity = this.playerStarterAssetsInputs.move.x + this.playerStarterAssetsInputs.move.y;
         this.isGrounded = this.playerGeniesThirdPersonController.Grounded;
+
         if (this.isGrounded && velocity != 0) {
             this.stepTimer += Time.deltaTime;
 
@@ -26,12 +27,6 @@ export default class FootstepAudio extends MonoBehaviour {
                 this.stepTimer = 0;
             }
             this.jumpSoundPlayed = false;
-        }
-
-        if (!this.isGrounded && !this.jumpSoundPlayed) {
-            this.playJumpSound();
-            this.jumpSoundPlayed = true;
-            this.landSoundPlayed = false;
         }
 
         if (this.isGrounded && !this.landSoundPlayed) {
@@ -51,10 +46,6 @@ export default class FootstepAudio extends MonoBehaviour {
         }
     }
 
-    playJumpSound() {
-        this.audioSource.clip = this.jumpSound;
-        this.audioSource.Play();
-    }
 
     playLandSound() {
         this.audioSource.clip = this.landSound;

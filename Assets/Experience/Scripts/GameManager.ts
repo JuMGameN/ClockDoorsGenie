@@ -11,6 +11,12 @@ export enum GameState {
 
 export default class GameManager extends MonoBehaviour {
 
+    OnStart: GeniesEvent = new GeniesEvent();
+    OnLoading: GeniesEvent = new GeniesEvent();
+    OnGamePlay: GeniesEvent = new GeniesEvent();
+    OnGameOver: GeniesEvent = new GeniesEvent();
+    OnWinGame: GeniesEvent = new GeniesEvent();
+
     /** This is an event that is triggered when the current GameState changes. */
     @NonSerialized public OnGameStateChange: GeniesEvent<[GameState]> = new GeniesEvent<[GameState]>();
     /** This is an instance of the GameManager singleton. */
@@ -28,8 +34,7 @@ export default class GameManager extends MonoBehaviour {
     }
 
     Start() {
-        //Set the game state to LOADING at the Start
-        //this.ChangeGameState(GameState.LOADING);
+        this.ChangeGameState(GameState.INITIAL);
     }
 
     /** @returns the game's current GameState value */
@@ -46,8 +51,29 @@ export default class GameManager extends MonoBehaviour {
         if (newState == this.gameState) {
             return;
         }
-        console.log("New Game State Change: ", newState)
+
         this.OnGameStateChange.trigger(newState);
         this.gameState = newState;
+        this.CheckGameState(newState);
+    }
+
+    CheckGameState(newState: GameState) {
+        switch (newState) {
+            case GameState.INITIAL:
+                this.OnStart.trigger();
+                break;
+            case GameState.LOADING:
+                this.OnLoading.trigger();
+                break;
+            case GameState.GAME_PLAY:
+                this.OnGamePlay.trigger();
+                break;
+            case GameState.GAME_OVER:
+                this.OnGameOver.trigger();
+                break;
+            case GameState.WIN_GAME:
+                this.OnWinGame.trigger();
+                break;
+        }
     }
 }

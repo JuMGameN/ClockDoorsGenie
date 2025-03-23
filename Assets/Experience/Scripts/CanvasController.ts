@@ -9,8 +9,6 @@ import ScoreManager from "./ScoreManager";
 
 export default class CanvasController extends MonoBehaviour {
 
-
-
     @Header("Main Menu UI References")
     @SerializeField private loadingPanel: GameObject;
     @SerializeField private playButton: Button;
@@ -19,13 +17,17 @@ export default class CanvasController extends MonoBehaviour {
     @Header("Game Over UI References")
     @SerializeField private gameOverPanel: GameObject;
     @SerializeField private replayButton: Button;
+    @SerializeField private gameOverText: TMP_Text;
 
     @Header("Win UI References")
     @SerializeField private winGamePanel: GameObject;
     @SerializeField private winText: TMP_Text;
     @SerializeField private winReplayButton: Button;
 
-    private gameOverCoroutine: Coroutine;
+    @Header("Leaderboard UI References")
+    @SerializeField private leaderboardGamePanel: GameObject;
+    // @SerializeField private leaderboardButton: Button;
+
     private gameManager: GameManager;
 
     private staminaManager: PlayerStaminaManager;
@@ -46,6 +48,7 @@ export default class CanvasController extends MonoBehaviour {
         //Add listeners to the Button click events
         this.muteButton.onClick.AddListener(this.OnMuteButtonPressed);
         this.replayButton.onClick.AddListener(this.OnReplayButtonPressed);
+        // this.leaderboardButton.onClick.AddListener(this.OnLeaderboardButtonPressed);
         //   this.winReplayButton.onClick.AddListener(this.OnReplayButtonPressed);
 
         TimerManager.Instance.onTimeUpdate.addListener(this.updateTimerUI);
@@ -63,6 +66,10 @@ export default class CanvasController extends MonoBehaviour {
         }
         GameManager.Instance.ChangeGameState(GameState.INITIAL);
         //this.CheckGameState(GameState.INITIAL);
+    }
+    OnLeaderboardButtonPressed() {
+        const isPressed = this.leaderboardGamePanel.activeSelf;
+        this.leaderboardGamePanel.SetActive(!isPressed);
     }
     private updateStaminaBar(staminaPercentage: number): void {
 
@@ -97,14 +104,17 @@ export default class CanvasController extends MonoBehaviour {
     }
 
     private OnWinGame() {
-        this.gameOverPanel.SetActive(false);
-        this.loadingPanel.SetActive(false);
-        this.winGamePanel.SetActive(true);
-        this.winText.text = "Your score: " + TimerManager.Instance.getElapsedTimeFormatted(ScoreManager.Instance.getScore());
-        this.replayButton.GetComponentInChildren<TMP_Text>().text = "Restart";
-        this.replayButton.gameObject.SetActive(true);
-        this.loadingText.gameObject.SetActive(false);
-
+        setTimeout(() => {
+            this.gameOverPanel.SetActive(false);
+            this.loadingPanel.SetActive(false);
+            this.winGamePanel.SetActive(true);
+            this.winText.text = "Your time \n" + TimerManager.Instance.getElapsedTimeFormatted(ScoreManager.Instance.getScore())
+                + "\nOverall best time \n" + TimerManager.Instance.getElapsedTimeFormatted(ScoreManager.Instance.getGlobalHighScore());
+            this.replayButton.GetComponentInChildren<TMP_Text>().text = "Restart";
+            this.replayButton.gameObject.SetActive(true);
+            this.loadingText.gameObject.SetActive(false);
+            //      this.leaderboardButton.gameObject.SetActive(true);
+        }, 1000);
     }
     /** This will manage the canvas once the Avatar is loading. */
     private OnStart() {
@@ -114,6 +124,8 @@ export default class CanvasController extends MonoBehaviour {
         this.replayButton.GetComponentInChildren<TMP_Text>().text = "Play";
         this.replayButton.gameObject.SetActive(true);
         this.loadingText.gameObject.SetActive(false);
+        //    this.leaderboardButton.gameObject.SetActive(false);
+        this.leaderboardGamePanel.SetActive(false);
     }
 
     private OnLoading() {
@@ -122,27 +134,32 @@ export default class CanvasController extends MonoBehaviour {
         this.winGamePanel.SetActive(false);
         this.replayButton.gameObject.SetActive(false);
         this.loadingText.gameObject.SetActive(true);
+        //   this.leaderboardButton.gameObject.SetActive(false);
+        this.leaderboardGamePanel.SetActive(false);
     }
 
     private OnGamePlay() {
-        TimerManager.Instance.startTimer();
         this.gameOverPanel.SetActive(false);
         this.loadingPanel.SetActive(false);
         this.winGamePanel.SetActive(false);
         this.replayButton.gameObject.SetActive(false);
         this.loadingText.gameObject.SetActive(false);
+        //    this.leaderboardButton.gameObject.SetActive(false);
+        this.leaderboardGamePanel.SetActive(false);
     }
 
     /** This will manage the canvas once the game ends. */
     private OnGameOver() {
-        TimerManager.Instance.stopTimer();
-        TimerManager.Instance.resetTimer();
         this.gameOverPanel.SetActive(true);
         this.loadingPanel.SetActive(false);
         this.winGamePanel.SetActive(false);
+        this.gameOverText.text = "Your best time \n" + TimerManager.Instance.getElapsedTimeFormatted(Number(ScoreManager.Instance.getPersonalHighScore()))
+            + "\nOverall best time \n" + TimerManager.Instance.getElapsedTimeFormatted(ScoreManager.Instance.getGlobalHighScore());
         this.replayButton.GetComponentInChildren<TMP_Text>().text = "Restart";
         this.replayButton.gameObject.SetActive(true);
         this.loadingText.gameObject.SetActive(false);
+        //    this.leaderboardButton.gameObject.SetActive(true);
+        this.leaderboardGamePanel.SetActive(false);
     }
 
     private OnMuteButtonPressed() {

@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: cfcf31dbf16cab447bd2572dfe8f2a03
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: "{\"IsCompiled\":true,\"CompilerVersion\":\"2.0.63\",\"ReferencedSpecifiers\":[\"@assets/Experience/Scripts/PlayerStaminaManager\",\"@assets/Experience/Scripts/GameManager\",\"@assets/Experience/Scripts/TimerManager\",\"@assets/Experience/Scripts/ScoreManager\"],\"Source\":\"\\\"use
+    strict\\\";\\nObject.defineProperty(exports, \\\"__esModule\\\", { value: true
+    });\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\nconst GameManager_1
+    = require(\\\"@assets/Experience/Scripts/GameManager\\\");\\nclass Monologue
+    extends UnityEngine_1.MonoBehaviour {\\n    constructor() {\\n        super(...arguments);\\n       
+    this.isTyping = false;\\n        this.isPlayed = [false, false, false, false,
+    false, false, false];\\n        this.messages = [\\n            [\\\"Where\u2026
+    am I?\\\", \\\"I have to get out of here. But how?\\\", \\\"The clocks\u2026
+    do they mean something?\\\", \\\"Doors...?\\\", \\\"\\\"], // Starting thoughts\\n           
+    [\\\"I hope this is the right one\u2026\\\", \\\"Please let this be the way out.\\\",
+    \\\"The time\u2026 I need to focus.\\\", \\\"If I mess this up, I\u2019ll just
+    go higher\u2026\\\", \\\"This has to be it. It has to be.\\\", \\\"\\\"], //
+    Choosing a door\\n            [\\\"No\u2026 I\u2019m going the wrong way!\\\",
+    \\\"I can\u2019t keep climbing forever\u2026\\\", \\\"My legs are getting heavy\u2026\\\",
+    \\\"I need to find water, fast.\\\", \\\"I can\u2019t afford too many mistakes.\\\",
+    \\\"\\\"], // Wrong door (going up)\\n            [\\\"Down. That\u2019s good.\\\",
+    \\\"This has to be the way out\u2026 right?\\\", \\\"The ground has to be somewhere
+    below.\\\", \\\"Keep going. Don\u2019t stop.\\\", \\\"\\\"], // Correct door
+    (going down)\\n            [\\\"Water! Finally!\\\", \\\"I needed that.\\\",
+    \\\"I don\u2019t know how much longer I can last without this.\\\", \\\"I have
+    to be careful with my bottle\u2026\\\", \\\"This should keep me going a little
+    longer.\\\", \\\"\\\"], // Finding water\\n            [\\\"No\u2026 I can\u2019t
+    go on\u2026\\\", \\\"My throat\u2026 dry\u2026 I\u2026\\\", \\\"I shouldn\u2019t
+    have gone the wrong way so many times\u2026\\\", \\\"I\u2026 can\u2019t\u2026
+    move\u2026\\\", \\\"\\\"], // Running out of water (Game Over)\\n           
+    [\\\"The ground\u2026 it\u2019s real!\\\", \\\"I made it! I actually made it!\\\",
+    \\\"I can breathe. I\u2019m free.\\\", \\\"Wait, ... this is not my bedroom.\\\",
+    \\\"Where am I?\\\", \\\"To be continued...\\\", \\\"\\\"] // Reaching the ground\\n       
+    ];\\n        this.textDisplayTime = 3000;\\n    }\\n    Start() {\\n        this.monologueText.text
+    = \\\"\\\";\\n        GameManager_1.default.Instance.OnGamePlay.addListener(()
+    => this.showMessages(0));\\n        GameManager_1.default.Instance.OnWinGame.addListener(()
+    => this.showMessages(6));\\n        let player = // @ts-ignore\\n         this.gameObject.GetComponent(\\\"@assets/Experience/Scripts/PlayerStaminaManager.PlayerStaminaManager\\\");\\n       
+    player.onStaminaChange.addListener((stamina) => this.staminaMessage(stamina));\\n   
+    }\\n    staminaMessage(stamina) {\\n        if (stamina < 0.9) {\\n           
+    this.showMessages(2);\\n        }\\n        else if (stamina < 0.3) {\\n           
+    this.showMessages(5);\\n        }\\n    }\\n    showMessages(categoryIndex) {\\n       
+    if (this.isTyping) {\\n            this.stopMessages();\\n        }\\n       
+    else {\\n            if (categoryIndex < this.messages.length && !this.isPlayed[categoryIndex])
+    {\\n                this.isTyping = true;\\n                this.monologueText.gameObject.SetActive(true);\\n               
+    this.isPlayed[categoryIndex] = true;\\n                this.messages[categoryIndex].forEach((message,
+    i) => {\\n                    setTimeout(() => {\\n                        this.monologueText.text
+    = message;\\n                        this.isTyping = false;\\n                   
+    }, i * 3000);\\n                });\\n            }\\n        }\\n    }\\n   
+    stopMessages() {\\n        this.monologueText.text = \\\"\\\";\\n        this.monologueText.gameObject.SetActive(false);\\n   
+    }\\n}\\nexports.default = Monologue;\\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW9ub2xvZ3VlLmpzIiwibWFwcGluZ3MiOiI7O0FBRUEsNkNBQXFEO0FBRXJELHdFQUF1QztBQUd2QyxNQUFxQixTQUFVLFNBQVEsMkJBQWE7SUFBcEQ7O1FBSVksYUFBUSxHQUFZLEtBQUs7UUFFekIsYUFBUSxHQUFjLENBQUMsS0FBSyxFQUFFLEtBQUssRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLEtBQUssRUFBRSxLQUFLLEVBQUUsS0FBSyxDQUFDO1FBQ3ZFLGFBQVEsR0FBZTtZQUMzQixDQUFDLGNBQWMsRUFBRSxxQ0FBcUMsRUFBRSxxQ0FBcUMsRUFBRSxXQUFXLEVBQUUsRUFBRSxDQUFDLEVBQUUsb0JBQW1CO1lBQ3BJLENBQUMsK0JBQStCLEVBQUUsaUNBQWlDLEVBQUUsNEJBQTRCLEVBQUUseUNBQXlDLEVBQUUsa0NBQWtDLEVBQUUsRUFBRSxDQUFDLEVBQUUsa0JBQWlCO1lBQ3hNLENBQUMsOEJBQThCLEVBQUUsZ0NBQWdDLEVBQUUsNEJBQTRCLEVBQUUsNkJBQTZCLEVBQUUsbUNBQW1DLEVBQUUsRUFBRSxDQUFDLEVBQUUsd0JBQXVCO1lBQ2pNLENBQUMsb0JBQW9CLEVBQUUsb0NBQW9DLEVBQUUsdUNBQXVDLEVBQUUseUJBQXlCLEVBQUUsRUFBRSxDQUFDLEVBQUUsNEJBQTJCO1lBQ2pLLENBQUMsaUJBQWlCLEVBQUUsZ0JBQWdCLEVBQUUsdURBQXVELEVBQUUsc0NBQXNDLEVBQUUsNENBQTRDLEVBQUUsRUFBRSxDQUFDLEVBQUUsZ0JBQWU7WUFDek0sQ0FBQyxvQkFBb0IsRUFBRSxvQkFBb0IsRUFBRSxvREFBb0QsRUFBRSxpQkFBaUIsRUFBRSxFQUFFLENBQUMsRUFBRSxtQ0FBa0M7WUFDN0osQ0FBQyx3QkFBd0IsRUFBRSxnQ0FBZ0MsRUFBRSwwQkFBMEIsRUFBRSxtQ0FBbUMsRUFBRSxhQUFhLEVBQUUsb0JBQW9CLEVBQUUsRUFBRSxDQUFDLENBQUMsc0JBQXFCO1NBQy9MLENBRWM7UUFDUCxvQkFBZSxHQUFXLElBQUk7SUE2QzFDO0lBM0NZLEtBQUs7UUFDVCxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksR0FBRyxFQUFFO1FBQzVCLHFCQUFXLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUN2RSxxQkFBVyxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDdEUsSUFBSSxNQUFNLEdBQUU7U0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVcsdUVBQXFCLENBQUk7UUFDakUsTUFBTSxDQUFDLGVBQWUsQ0FBQyxXQUFXLENBQUMsQ0FBQyxPQUFlLEVBQUUsRUFBRSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsT0FBTyxDQUFDLENBQUM7SUFFekY7SUFFQSxjQUFjLENBQUMsT0FBZTtRQUMxQixJQUFJLE9BQU8sR0FBRyxHQUFHLEVBQUU7WUFDZixJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQztRQUN4QjthQUNLLElBQUksT0FBTyxHQUFHLEdBQUcsRUFBRTtZQUNwQixJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQztRQUN4QjtJQUNKO0lBRUEsWUFBWSxDQUFDLGFBQXFCO1FBQzlCLElBQUksSUFBSSxDQUFDLFFBQVEsRUFBRTtZQUNmLElBQUksQ0FBQyxZQUFZLEVBQUU7UUFDdkI7YUFDSztZQUNELElBQUksYUFBYSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTSxJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsRUFBRTtnQkFDdkUsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJO2dCQUNwQixJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDO2dCQUM3QyxJQUFJLENBQUMsUUFBUSxDQUFDLGFBQWEsQ0FBQyxHQUFHLElBQUk7Z0JBQ25DLElBQUksQ0FBQyxRQUFRLENBQUMsYUFBYSxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLENBQUMsRUFBRSxFQUFFO29CQUNoRCxVQUFVLENBQUMsR0FBRyxFQUFFO3dCQUNaLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxHQUFHLE9BQU87d0JBQ2pDLElBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSztvQkFDekIsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUM7Z0JBRWhCLENBQUMsQ0FBQztZQUNOO1FBQ0o7SUFFSjtJQUVBLFlBQVk7UUFDUixJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksR0FBRyxFQUFFO1FBQzVCLElBQUksQ0FBQyxhQUFhLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUM7SUFDbEQ7Q0FDSjtBQS9EQSw0QkErREEiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1vbm9sb2d1ZS50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdfQ==\",\"ScriptHash\":\"ad4499f9b64ee5658f8ccd3e70c364f3\",\"Specifier\":\"@assets/Experience/Scripts/Monologue\",\"DefaultTypeName\":\"@assets/Experience/Scripts/Monologue.Monologue\",\"IsMonobehaviour\":true,\"IsScriptableObj\":false,\"InheritanceChain\":[\"@assets/Experience/Scripts/Monologue.Monologue\",\"UnityEngine.MonoBehaviour\",\"UnityEngine.Behaviour\",\"UnityEngine.Component\",\"UnityEngine.Object\",\"@com.genies.scripting@1.11.0\\\\Runtime\\\\Typing\\\\index.d.System.Object\"],\"Properties\":[{\"Path\":\"monologueText\",\"Name\":\"monologueText\",\"TypeName\":\"TMPro.TMP_Text\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[{\"Type\":\"SerializeField\",\"Args\":[]}],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Monologue
+    Text\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null},{\"Path\":\"messageIndex\",\"Name\":\"messageIndex\",\"TypeName\":\"System.Double\",\"AssemblyName\":null,\"EnumKeys\":[],\"EnumValues\":[],\"IsGeniesBehaviourRef\":false,\"IsGeniesScriptableObjectRef\":false,\"Decorators\":[{\"Type\":\"SerializeField\",\"Args\":[]}],\"Initializers\":[],\"ArrayDimension\":-1,\"IsArray\":false,\"IsEnum\":false,\"ArrayElementInitializer\":null,\"ChildProperties\":[],\"PrettyName\":\"Message
+    Index\",\"_arrayElementInitializerJson\":null,\"_childPropertiesJson\":\"[]\",\"_prettyName\":null}],\"SupportedUiEvents\":\"None\",\"DisplayName\":\"Monologue\",\"name\":\"Monologue\",\"hideFlags\":\"NotEditable\"}"

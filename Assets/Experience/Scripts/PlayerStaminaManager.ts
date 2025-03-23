@@ -10,6 +10,7 @@ export default class PlayerStaminaManager extends MonoBehaviour {
     onStaminaChange: GeniesEvent<[number]> = new GeniesEvent<[number]>();
     onStaminaEnd: GeniesEvent = new GeniesEvent();
     onPlayerFall: GeniesEvent = new GeniesEvent();
+    onStaminaLow: GeniesEvent = new GeniesEvent();
 
     private characterController: GeniesThirdPersonController;
 
@@ -74,6 +75,7 @@ export default class PlayerStaminaManager extends MonoBehaviour {
 
             if (staminaPercentage <= 40 && staminaPercentage > 0 && amount < 0) {
                 currentSFX = "BreathingSlow";
+                this.onStaminaLow.trigger();
             }
             else if (staminaPercentage != 100 && amount > 0) {
                 currentSFX = "Drinking";
@@ -124,7 +126,7 @@ export default class PlayerStaminaManager extends MonoBehaviour {
         }
         if (other.gameObject.name.includes("WinArea")) {
             this.isInDeathArea = false;
-            this.winGame();
+            GameManager.Instance.ChangeGameState(GameState.WIN_GAME);
 
         }
     }
@@ -141,12 +143,4 @@ export default class PlayerStaminaManager extends MonoBehaviour {
         }
     }
 
-    private winGame(): void {
-        TimerManager.Instance.stopTimer();
-        ScoreManager.Instance.setScore();
-
-        setTimeout(() => {
-            GameManager.Instance.ChangeGameState(GameState.WIN_GAME);
-        }, 3000);
-    }
 }

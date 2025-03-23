@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: ec7ccaf29a3ec414f84aa2e72845fc05
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":[],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    StarterAssets_1 = require(\"StarterAssets\");\nconst UnityEngine_1 = require(\"UnityEngine\");\nclass
+    Downstairs extends UnityEngine_1.MonoBehaviour {\n    constructor() {\n       
+    super(...arguments);\n        this.jumpHeight = 2;\n        this.normalGravity
+    = 9.81;\n        this.velocity = new UnityEngine_1.Vector3(0, 0, 0);\n       
+    this.isOnStairs = false;\n        this.checkRadius = 1.0;\n        this.rayDistance
+    = 1.5;\n        this.stairGravity = 30;\n        this.playerGravity = 9.81;\n   
+    }\n    Start() {\n        this.starterAssetsInputs = this.transform.GetComponent($typeof(StarterAssets_1.StarterAssetsInputs));\n       
+    this.thirdpersonController = this.transform.GetComponent($typeof(StarterAssets_1.GeniesThirdPersonController));\n       
+    this.playerGravity = this.thirdpersonController.Gravity;\n    }\n    Update()
+    {\n        this.checkStairs();\n        if (this.isOnStairs) {\n            this.playerGravity
+    -= this.stairGravity * UnityEngine_1.Time.deltaTime;\n        }\n        else
+    if (this.isJumping()) {\n            this.playerGravity = UnityEngine_1.Mathf.Sqrt(this.jumpHeight
+    * 2 * this.normalGravity);\n        }\n        else {\n            // Apply gravity\n           
+    this.playerGravity -= this.normalGravity * UnityEngine_1.Time.deltaTime;\n       
+    }\n    }\n    isJumping() {\n        if (this.starterAssetsInputs.jump) {\n           
+    return true;\n        }\n        return false;\n    }\n    checkStairs() {\n       
+    let ref = $ref(); // Declare RaycastHit as a reference type\n        let rayStart
+    = this.transform.position;\n        let rayDirection = UnityEngine_1.Vector3.down;
+    // Cast ray downward\n        // Create a Ray with origin and direction\n       
+    let ray = new UnityEngine_1.Ray(rayStart, rayDirection);\n        // The third
+    argument is for max distance. It will now use the hit reference directly\n       
+    if ( // @ts-ignore\n        UnityEngine_1.Physics.Raycast_EBB7509C_FFE24EBA(ray,
+    ref, this.rayDistance)) {\n            let hitInfo = $unref(ref);\n           
+    if (hitInfo.collider.gameObject.name.includes(\"Stairs\")) {\n               
+    this.isOnStairs = true;\n                return;\n            }\n        }\n       
+    this.isOnStairs = false;\n    }\n}\nexports.default = Downstairs;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRG93bnN0YWlycy5qcyIsIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFnRjtBQUNoRiw2Q0FBcUc7QUFFckcsTUFBcUIsVUFBVyxTQUFRLDJCQUFhO0lBQXJEOztRQUVZLGVBQVUsR0FBVyxDQUFDO1FBQ3RCLGtCQUFhLEdBQVcsSUFBRztRQUMzQixhQUFRLEdBQVksSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFDO1FBQ3hDLGVBQVUsR0FBWSxLQUFLO1FBRzNCLGdCQUFXLEdBQVcsR0FBRztRQUN6QixnQkFBVyxHQUFXLEdBQUc7UUFDakMsaUJBQVksR0FBVyxFQUFFO1FBQ3pCLGtCQUFhLEdBQVcsSUFBSTtJQXFEaEM7SUFuRFksS0FBSztRQUNULElBQUksQ0FBQyxtQkFBbUIsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFlBQVcsU0FBRSxtQ0FBa0IsRUFBSTtRQUM3RSxJQUFJLENBQUMscUJBQXFCLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxZQUFXLFNBQUUsMkNBQTBCLEVBQUk7UUFDdkYsSUFBSSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMscUJBQXFCLENBQUMsT0FBTztJQUMzRDtJQUVPLE1BQU07UUFFVCxJQUFJLENBQUMsV0FBVyxFQUFFO1FBQ2xCLElBQUksSUFBSSxDQUFDLFVBQVUsRUFBRTtZQUVqQixJQUFJLENBQUMsYUFBYSxJQUFJLElBQUksQ0FBQyxZQUFZLEdBQUcsa0JBQUksQ0FBQyxTQUFTO1FBRTVELENBQUM7YUFBTSxJQUFJLElBQUksQ0FBQyxTQUFTLEVBQUUsRUFBRTtZQUN6QixJQUFJLENBQUMsYUFBYSxHQUFHLG1CQUFLLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxVQUFVLEdBQUcsQ0FBQyxHQUFHLElBQUksQ0FBQyxhQUFhLENBQUM7UUFDN0U7YUFDSztZQUNELGdCQUFlO1lBQ2YsSUFBSSxDQUFDLGFBQWEsSUFBSSxJQUFJLENBQUMsYUFBYSxHQUFHLGtCQUFJLENBQUMsU0FBUztRQUU3RDtJQUVKO0lBRVEsU0FBUztRQUNiLElBQUksSUFBSSxDQUFDLG1CQUFtQixDQUFDLElBQUksRUFBRTtZQUMvQixPQUFPLElBQUk7UUFDZjtRQUNBLE9BQU8sS0FBSztJQUNoQjtJQUVRLFdBQVc7UUFDZixJQUFJLEdBQUcsR0FBRyxJQUFJLEVBQWMsQ0FBQyxDQUFDLHlDQUF3QztRQUN0RSxJQUFJLFFBQVEsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVE7UUFDdEMsSUFBSSxZQUFZLEdBQUcscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQyxvQkFBbUI7UUFFcEQseUNBQXdDO1FBQ3hDLElBQUksR0FBRyxHQUFHLElBQUksaUJBQUcsQ0FBQyxRQUFRLEVBQUUsWUFBWSxDQUFDO1FBRXpDLHFGQUFvRjtRQUNwRixLQUFHO1FBQUMscUJBQU8sQ0FBQyx5QkFBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsSUFBSSxDQUFDLFdBQVcsQ0FBQyxFQUFFO1lBQzdDLElBQUksT0FBTyxHQUFHLE1BQU0sQ0FBQyxHQUFHLENBQUM7WUFDekIsSUFBSSxPQUFPLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLFFBQVEsQ0FBQyxFQUFFO2dCQUNyRCxJQUFJLENBQUMsVUFBVSxHQUFHLElBQUk7Z0JBQ3RCLE9BQU07WUFDVjtRQUNKO1FBRUEsSUFBSSxDQUFDLFVBQVUsR0FBRyxLQUFLO0lBQzNCO0NBRUo7QUFoRUEsNkJBZ0VBIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJEb3duc3RhaXJzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbF19","ScriptHash":"76dc2c62a1ddd0caebf3f5eb9bfb9d47","Specifier":"@assets/Experience/Scripts/Downstairs","DefaultTypeName":"@assets/Experience/Scripts/Downstairs.Downstairs","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/Downstairs.Downstairs","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[{"Path":"stairGravity","Name":"stairGravity","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["30"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Stair
+    Gravity","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null},{"Path":"playerGravity","Name":"playerGravity","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[],"Initializers":["9.81"],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Player
+    Gravity","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null}],"SupportedUiEvents":"None","DisplayName":"Downstairs","name":"Downstairs","hideFlags":"NotEditable"}'

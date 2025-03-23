@@ -1,4 +1,5 @@
 import { Time, MonoBehaviour } from "UnityEngine";
+import GameManager from "./GameManager";
 
 export default class TimerManager extends MonoBehaviour {
 
@@ -18,12 +19,24 @@ export default class TimerManager extends MonoBehaviour {
         }
     }
 
-
+    private Start() {
+        GameManager.Instance.OnLoading.addListener(() => this.stopAndReset());
+        GameManager.Instance.OnStart.addListener(() => this.stopAndReset());
+        GameManager.Instance.OnGamePlay.addListener(() => this.startTimer());
+        GameManager.Instance.OnGameOver.addListener(() => this.stopTimer());
+        GameManager.Instance.OnWinGame.addListener(() => this.stopTimer());
+        this.Update();
+    }
     private Update(): void {
         if (this.isRunning) {
             this.elapsedTime += Time.deltaTime;
         }
         this.updateUI();
+    }
+
+    private stopAndReset(): void {
+        this.stopTimer();
+        this.resetTimer();
     }
 
     // Start the timer

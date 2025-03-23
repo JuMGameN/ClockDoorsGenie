@@ -48,3 +48,4 @@ mono_crash.*
 Genies/Scripting
 node_modules
 Assets/EasyColliderEditor
+Assets/ThirdParty

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1036ddd37fa10a541ae33e341b68a0c2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":[],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    StarterAssets_1 = require(\"StarterAssets\");\nconst UnityEngine_1 = require(\"UnityEngine\");\nclass
+    Falling extends UnityEngine_1.MonoBehaviour {\n    Start() {\n        this.thirdpersonController
+    = this.transform.GetComponent($typeof(StarterAssets_1.GeniesThirdPersonController));\n       
+    this.starterAssetsInputs = this.transform.GetComponent($typeof(StarterAssets_1.StarterAssetsInputs));\n       
+    this.characterController = this.transform.GetComponent($typeof(UnityEngine_1.CharacterController));\n   
+    }\n    Update() {\n        if (!this.thirdpersonController.Grounded && !this.starterAssetsInputs.jump)
+    {\n            this.restrictMovement();\n        }\n    }\n    restrictMovement()
+    {\n        if (this.characterController) {\n            this.characterController.Move(//
+    @ts-ignore\n            UnityEngine_1.Vector3.op_Multiply_EBB7509C_H75CC56AF(new
+    UnityEngine_1.Vector3(0, this.characterController.velocity.y, 0), UnityEngine_1.Time.deltaTime));\n       
+    }\n    }\n}\nexports.default = Falling;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbGluZy5qcyIsIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFnRjtBQUNoRiw2Q0FBK0U7QUFFL0UsTUFBcUIsT0FBUSxTQUFRLDJCQUFhO0lBTXRDLEtBQUs7UUFDVCxJQUFJLENBQUMscUJBQXFCLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxZQUFXLFNBQUUsMkNBQTBCLEVBQUk7UUFDdkYsSUFBSSxDQUFDLG1CQUFtQixHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsWUFBVyxTQUFFLG1DQUFrQixFQUFJO1FBQzdFLElBQUksQ0FBQyxtQkFBbUIsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFlBQVcsU0FBRSxpQ0FBa0IsRUFBSTtJQUNqRjtJQUdRLE1BQU07UUFDVixJQUFJLENBQUMsSUFBSSxDQUFDLHFCQUFxQixDQUFDLFFBQVEsSUFBSSxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxJQUFJLEVBQUU7WUFDeEUsSUFBSSxDQUFDLGdCQUFnQixFQUFFO1FBQzNCO0lBQ0o7SUFDUSxnQkFBZ0I7UUFDcEIsSUFBSSxJQUFJLENBQUMsbUJBQW1CLEVBQUU7WUFDMUIsSUFBSSxDQUFDLG1CQUFtQixDQUFDLElBQUk7aUVBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxJQUFJLENBQUMsbUJBQW1CLENBQUMsUUFBUSxDQUFDLENBQUMsRUFBRSxDQUFDLEdBQUksa0JBQUksQ0FBQyxTQUFRLENBQUMsQ0FBQztRQUMxRztJQUNKO0NBRUo7QUF4QkEsMEJBd0JBIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJGYWxsaW5nLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbF19","ScriptHash":"b754f87c9bea158fa2f68cf79261f0ad","Specifier":"@assets/Experience/Scripts/Falling","DefaultTypeName":"@assets/Experience/Scripts/Falling.Falling","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/Falling.Falling","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[],"SupportedUiEvents":"None","DisplayName":"Falling","name":"Falling","hideFlags":"NotEditable"}'

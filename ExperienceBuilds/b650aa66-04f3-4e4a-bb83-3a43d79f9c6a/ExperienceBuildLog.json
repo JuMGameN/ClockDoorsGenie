@@ -1,703 +1,863 @@
 {
     "Items": [
         {
-            "TimestampUtc": 1742573328,
+            "TimestampUtc": 1742750136,
             "Message": "",
             "EventType": "Build Start"
         },
         {
-            "TimestampUtc": 1742573328,
+            "TimestampUtc": 1742750136,
             "Message": "[Preprocess Assets] Running ExperienceScriptingBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573328,
+            "TimestampUtc": 1742750136,
             "Message": "[Preprocess Assets] Running ExperienceScenesBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573328,
+            "TimestampUtc": 1742750136,
             "Message": "[PreBuild Step] Running PreExperienceBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573328,
+            "TimestampUtc": 1742750136,
             "Message": "[PreBuild Step] Running ExperienceScriptingBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573331,
+            "TimestampUtc": 1742750140,
             "Message": "[PreBuild Step] Running ExperienceLayersBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573331,
+            "TimestampUtc": 1742750141,
             "Message": "[PreBuild Step] Running ExperienceQualityLevelBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573331,
+            "TimestampUtc": 1742750141,
             "Message": "[PreBuild Step] Running TraitsBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573331,
+            "TimestampUtc": 1742750141,
             "Message": "[PreBuild Step] Running SetupAddressablesBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Die.anim",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Dying Backwards.fbx",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/JumpLand.anim",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/StarterAssetsThirdPerson.controller",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Zombie_Death_Hit_Back_1_IPC.anim",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Zombie_Death_Hit_Back_1_IPC.fbx",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Zombie_Death_Hit_Forward_1_Start_IPC.anim",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Animations/Zombie_Death_Hit_Forward_1_Start_IPC.fbx",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Audio/26-Kinda Wonderful-Full-SM494.wav",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/53-Cloak-and-Dagger-FULL-SM421.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/ClocksAudioMixer.mixer",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/Creaky Door.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/Door Close.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Audio/Magical Plot Thickens Main.wav",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/ticktock.mp3",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/voice_female_a_effort_quick_action_07.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/voice_male_breathing_mask_loop_jog_01.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/voice_male_breathing_mask_loop_walk_jog_01.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/voice_male_effort_grunt_06.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/water_dripping_running_01_loop.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Audio/water_drops_drips_multiple_06.wav",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Leaderboard/Leaderboard.prefab",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Leaderboard/LeaderBoardEntry.prefab",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Leaderboard/LeaderboardSample.unity",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Black.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/ClockFace.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Floor.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Gras.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Material.001.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Wall.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/BridgeLeft.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/BridgeRight.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Door.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/DoorTrue.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Floors.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Player.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/WaterDispenserRestArea.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scenes/Clocks.unity",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scenes/GeniesThirdPersonExample.unity",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scenes/NewScene.unity",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scenes/SampleScene.unity",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/AnalogClock.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/AudioManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/CanvasController.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/DoorTrigger.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/Downstairs.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/Falling.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/FootstepAudio.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/GameManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/LeaderBoardManager.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/LeaderboardView.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/LeaderboardViewEntry.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/Monologue.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/MonologueTrigger.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/NameChanger.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/PlayerDeathManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/PlayerStaminaManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/ScoreManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Scripts/SkyboxChanger.ts",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/Sound.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/TimerManager.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/ToggleVisibilityOnTrigger.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/UniqueRandomTime.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Scripts/WinGame.ts",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Leaderboard/Textures/d_iconclosebutton@2x.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Leaderboard/Textures/HoldingHands.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/BuildQRCodes/Build_1.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Fonts/JotiOne-Regular SDF.asset",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Fonts/JotiOne-Regular.ttf",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Icons/Design ohne Titel (1) - Copy.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Icons/Design ohne Titel (1).png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Icons/icon.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Icons/thumbnail.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Images/Clock Doors_630x500.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Images/Title.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Images/Title_2.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Images/Title_3.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/New Folder/Material.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Skybox/Background_1.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Skybox/Background_2.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Skybox/Skybox.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Materials/Skybox/Skybox1.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
-            "Message": "Assets/Experience/Materials/Skybox/Title.png",
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Skybox/Skybox2 1.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Skybox/Skybox2.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Skybox/Skybox2.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/Skybox/SkyboxWin.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/WaterDispenser/Material.001.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/WaterDispenser/Material.002.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Materials/WaterDispenser/Material.mat",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/Clock.mat",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/ClockBase.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/ClockBase.blend1",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/ClockFacesAtlas.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/Door.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/Floors.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/Floors.blend1",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Models/Blender/Room.blend",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Models/Blender/Room.blend1",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/Stairs.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/TowerOutside.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/TowerOutside.blend1",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/WaterDispenser.blend",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/WaterDispenser.blend1",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/base_1.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/base_2.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/base_3.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/base_4.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/Stairs1m.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/Stairs2m.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Building/TowerHuge.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockWithTime.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/emptyBottle2.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/Icon_PictoIcon_Volume.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/Icon_PictoIcon_VolumeMute.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/water2.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/water21.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/textures/ClockFacesAtlas.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Models/Blender/textures/colors.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
+            "Message": "Assets/Experience/Models/Blender/textures/Colors2.png",
+            "EventType": "Asset Bundled"
+        },
+        {
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockHands/Hours.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockHands/Minutes.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockHands/Seconds.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/Clock.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFace.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/Sphere.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/WATER/1.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Sprites/WATER/2.png",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.001.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.002.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.003.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.004.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.005.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.006.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.007.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.008.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.009.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.010.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.011.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.012.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.013.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockBodies/Clock.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.001.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.002.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.003.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.004.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.005.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.006.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573333,
+            "TimestampUtc": 1742750142,
             "Message": "Assets/Experience/Prefabs/Clocks/ClockVisuals/ClockFaces/ClockFace.prefab",
             "EventType": "Asset Bundled"
         },
         {
-            "TimestampUtc": 1742573472,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running ExperienceLayersBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573472,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running ExperienceQualityLevelBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573472,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running TraitsBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573472,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running ExperienceScenesBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573472,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running BundleExperienceImagesBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running WriteModuleManifestBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "Starting to write moduleManifest to path",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "Writing moduleManifest to path: C:/Users/ganev/Unity/Genies_0/Assets\\../ExperienceBuilds\\b650aa66-04f3-4e4a-bb83-3a43d79f9c6a\\ExperienceBuildManifest.json",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "Successfully wrote moduleManifest to path: C:/Users/ganev/Unity/Genies_0/Assets\\../ExperienceBuilds\\b650aa66-04f3-4e4a-bb83-3a43d79f9c6a\\ExperienceBuildManifest.json",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running MultiplayerBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "Multiplayer is disabled, skip uploading multiplayer code.",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573473,
+            "TimestampUtc": 1742750333,
             "Message": "[PostBuild Step] Running ExperienceScriptingBuildStep",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573479,
+            "TimestampUtc": 1742750343,
             "Message": "starting to zip build.genies file",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573480,
+            "TimestampUtc": 1742750345,
             "Message": "finished zipping build.genies file",
             "EventType": "Info"
         },
         {
-            "TimestampUtc": 1742573480,
-            "Message": "Build took 152 seconds to complete.",
+            "TimestampUtc": 1742750345,
+            "Message": "Build took 209 seconds to complete.",
             "EventType": "Build End"
         }
     ]

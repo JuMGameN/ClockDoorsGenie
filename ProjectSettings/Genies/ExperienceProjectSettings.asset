@@ -30,8 +30,8 @@ MonoBehaviour:
           scenePath: Assets/Experience/Scenes/Clocks.unity
           buildIndex: -1
         ExperienceImages:
-          Thumbnail: {fileID: 2800000, guid: 0d7f06e2d55a2494da1bd6a4ace002c8, type: 3}
-          GameIcon: {fileID: 2800000, guid: 5bd64002b24f4764da14658a6d9d5ef8, type: 3}
+          Thumbnail: {fileID: 2800000, guid: b2e5c9d09aa315b4e9db2afeaeccf79e, type: 3}
+          GameIcon: {fileID: 2800000, guid: d5d2234307a391b47a802e9b5639bfe6, type: 3}
           GameBackground: {fileID: 0}
         experienceQualityLevel: 0
         platformToggleConfig:

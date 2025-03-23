@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: e5ac0cbcee7720b498608f9a05558da2
+  m_DefaultGroup: 9119b3a790da76c4d8f88a755874427a
   m_currentHash:
     serializedVersion: 2
-    Hash: b71b819bd3db7f7da519852a28818d58
+    Hash: 46a0dde6eb54a90aff0abce86000ea96
   m_OptimizeCatalogSize: 1
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -30,10 +30,10 @@ MonoBehaviour:
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
   m_ShaderBundleNaming: 2
-  m_ShaderBundleCustomNaming: 24707c4b4632e523cb3d924339f644643f11691808b44d794ae0f1a20da69d87
+  m_ShaderBundleCustomNaming: 1c625a65ba62665575d8097cdef8cfbc58e942bd95494a1b58cb6bc9ae03c90b
   m_MonoScriptBundleNaming: 3
   m_CheckForContentUpdateRestrictionsOption: 0
-  m_MonoScriptBundleCustomNaming: 24707c4b4632e523cb3d924339f644643f11691808b44d794ae0f1a20da69d87
+  m_MonoScriptBundleCustomNaming: 1c625a65ba62665575d8097cdef8cfbc58e942bd95494a1b58cb6bc9ae03c90b
   m_RemoteCatalogBuildPath:
     m_Id: 756ccc898e1e31b409c37988814b47a1
   m_RemoteCatalogLoadPath:
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 2
   m_overridePlayerVersion: genies
   m_GroupAssets:
-  - {fileID: 11400000, guid: 30ca94ba440b986488bbeb6ffbba14e8, type: 2}
+  - {fileID: 11400000, guid: b4640f2c6b6294b4ebd81d55bbdea1f5, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -99,7 +99,7 @@ MonoBehaviour:
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
-    - 24707c4b4632e523cb3d924339f644643f11691808b44d794ae0f1a20da69d87
+    - 1c625a65ba62665575d8097cdef8cfbc58e942bd95494a1b58cb6bc9ae03c90b
     - JS_ASSETS
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d06684d9715e714f8f3b38680495e88, type: 2}
   - {fileID: 11400000, guid: 95c11db7ddd7104468b5cdfe18bb0735, type: 2}
   - {fileID: 11400000, guid: f0eaba37bb1bcc04d835e0ccf6a896cc, type: 2}
+  - {fileID: 0}
   m_ActiveProfileId: 5a63f47666d59d14f89333035c8dd9bc
   m_HostingServicesManager:
     m_HostingServiceInfos: []

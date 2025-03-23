@@ -26,8 +26,7 @@ export default class PlayerDeathManager extends MonoBehaviour {
         }
         this.player = this.gameObject;
         await this.getAnimatorFromChildren();
-        GameManager.Instance.OnGameStateChange.addListener(this.CheckGameState);
-
+        GameManager.Instance.OnLoading.addListener(() => this.respawn());
     }
 
     private async getAnimatorFromChildren(): Promise<void> {
@@ -67,12 +66,6 @@ export default class PlayerDeathManager extends MonoBehaviour {
         }, 3000);
     }
 
-    private OnWin(): void {
-
-        this.respawn();
-
-    }
-
     private respawn(): void {
         this.characterController.enabled = false;
 
@@ -97,13 +90,6 @@ export default class PlayerDeathManager extends MonoBehaviour {
         TimerManager.Instance.resetTimer();
     }
 
-    private CheckGameState(newState: GameState) {
-        switch (newState) {
 
-            case GameState.WIN_GAME:
-                this.OnWin();
-                break;
-        }
-    }
 
 }

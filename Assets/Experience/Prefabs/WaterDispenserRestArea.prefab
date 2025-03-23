@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9141167130499670884}
   - component: {fileID: 6296941545800629580}
+  - component: {fileID: 6643598079996635826}
   m_Layer: 0
   m_Name: WaterDispenserRestArea
   m_TagString: RestArea
@@ -58,6 +59,74 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.7014573, y: 5.748314, z: 2.447542}
   m_Center: {x: 0.023631651, y: 2.8704133, z: 1.69556}
+--- !u!114 &6643598079996635826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350673355982637520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858dc640ae684bacb8622d5d44eb4ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedProperties:
+  - IntValue: 0
+    LongValue: 0
+    DoubleValue: 4
+    FloatValue: 0
+    BoolValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    UnityObjectReference: {fileID: 0}
+    LayerMaskValue:
+      serializedVersion: 2
+      m_Bits: 0
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+    RectValue:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    AnimationCurveValue:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    BoundsValue:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    QuaternionValue: {x: 0, y: 0, z: 0, w: 0}
+    Vector2IntValue: {x: 0, y: 0}
+    Vector3IntValue: {x: 0, y: 0, z: 0}
+    RectIntValue:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    BoundsIntValue:
+      m_Position: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0, z: 0}
+    GeniesBehaviourReference: {fileID: 0}
+    GeniesSOReference: {fileID: 0}
+    SerializedCsObjectValue: 
+    CsObjectReferences: []
+    TypeName: System.Double
+    ArrayLength: 0
+    IsArray: 0
+    ArrayDimension: -1
+    IsPrefabOverride: 0
+    PropType: 24
+    PropKey: monologueIndex
+    BasePath: monologueIndex
+  _script: {fileID: 4458252877524076426, guid: 5460c17183a82864f9ba2fcaab390127, type: 3}
+  _scriptAssetHash: 64aed4705c7d4fba8164fc3cbbdbf0e4
+  UiEventForwarders: []
 --- !u!1 &700969616330156470
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: f346b6f6ff374324391edff45381dcfc, type: 3}
+  - {fileID: 2100000, guid: 1f399611a3c404f449f34b84648fa1e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: f346b6f6ff374324391edff45381dcfc, type: 3}
+  - {fileID: 2100000, guid: 628265d791d089841bc97f3e89052bf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,7 +354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: f346b6f6ff374324391edff45381dcfc, type: 3}
+  - {fileID: 2100000, guid: 628265d791d089841bc97f3e89052bf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -369,7 +438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: f346b6f6ff374324391edff45381dcfc, type: 3}
+  - {fileID: 2100000, guid: da3a92d448f77164490c26253a6e36e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -473,7 +542,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: f346b6f6ff374324391edff45381dcfc, type: 3}
+  - {fileID: 2100000, guid: 628265d791d089841bc97f3e89052bf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

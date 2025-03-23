@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5460c17183a82864f9ba2fcaab390127
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 22604dd76f55453daccee3ed9e7b94b5, type: 3}
+  SerializedAsset: '{"IsCompiled":true,"CompilerVersion":"2.0.63","ReferencedSpecifiers":["@assets/Experience/Scripts/Monologue"],"Source":"\"use
+    strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\nclass MonologueTrigger extends UnityEngine_1.MonoBehaviour
+    {\n    OnTriggerEnter(other) {\n        let player = // @ts-ignore\n        
+    other.GetComponent(\"@assets/Experience/Scripts/Monologue.Monologue\");\n       
+    if (player) {\n            player.showMessages(this.monologueIndex);\n       
+    }\n    }\n}\nexports.default = MonologueTrigger;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW9ub2xvZ3VlVHJpZ2dlci5qcyIsIm1hcHBpbmdzIjoiOztBQUNBLDZDQUFxRDtBQUVyRCxNQUFxQixnQkFBaUIsU0FBUSwyQkFBYTtJQUcvQyxjQUFjLENBQUMsS0FBZTtRQUNsQyxJQUFJLE1BQU0sR0FBRTtTQUFDLEtBQUssQ0FBQyxZQUFXLGlEQUFVLENBQUk7UUFDNUMsSUFBSSxNQUFNLEVBQUU7WUFDUixNQUFNLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUM7UUFDNUM7SUFDSjtDQUNKO0FBVEEsbUNBU0EiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1vbm9sb2d1ZVRyaWdnZXIudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=","ScriptHash":"64aed4705c7d4fba8164fc3cbbdbf0e4","Specifier":"@assets/Experience/Scripts/MonologueTrigger","DefaultTypeName":"@assets/Experience/Scripts/MonologueTrigger.MonologueTrigger","IsMonobehaviour":true,"IsScriptableObj":false,"InheritanceChain":["@assets/Experience/Scripts/MonologueTrigger.MonologueTrigger","UnityEngine.MonoBehaviour","UnityEngine.Behaviour","UnityEngine.Component","UnityEngine.Object","@com.genies.scripting@1.11.0\\Runtime\\Typing\\index.d.System.Object"],"Properties":[{"Path":"monologueIndex","Name":"monologueIndex","TypeName":"System.Double","AssemblyName":null,"EnumKeys":[],"EnumValues":[],"IsGeniesBehaviourRef":false,"IsGeniesScriptableObjectRef":false,"Decorators":[{"Type":"SerializeField","Args":[]}],"Initializers":[],"ArrayDimension":-1,"IsArray":false,"IsEnum":false,"ArrayElementInitializer":null,"ChildProperties":[],"PrettyName":"Monologue
+    Index","_arrayElementInitializerJson":null,"_childPropertiesJson":"[]","_prettyName":null}],"SupportedUiEvents":"None","DisplayName":"MonologueTrigger","name":"MonologueTrigger","hideFlags":"NotEditable"}'
